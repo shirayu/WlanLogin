@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<PreferenceCategory android:title="@string/prefs_self_signed_certificate_title"	>
+		<CheckBoxPreference android:key="use_self_signed_certificate"
+		        android:title="@string/prefs_use_self_signed_certificate_name"
+		        android:summary="@string/prefs_use_self_signed_certificate_description"
+		        android:defaultValue="false" />
+	                
+		<jp.xii.relog.setting.FileSelectPreference
+		        android:id="@+id/FileSelect"
+		        android:key="self_signed_certificate_path"
+		        android:title="@string/prefs_self_signed_certificate_path"
+		/>
+		
+		<CheckBoxPreference android:key="use_self_signed_certificate_folder"
+		        android:title="@string/prefs_use_self_signed_certificate_folder_name"
+		        android:summary="@string/prefs_use_self_signed_certificate_folder_description"
+		        android:defaultValue="false" />
+		        
+	</PreferenceCategory>
+    
+</PreferenceScreen>

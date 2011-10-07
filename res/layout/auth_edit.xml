@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+    
+    
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:stretchColumns="1"
+android:shrinkColumns="1">
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/ssid"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+</TableRow>
+
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/id"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_id_fld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/id_fld"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_id_fld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/pass"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:inputType="text" />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_pass_fld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/pass_fld"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_pass_fld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/url"
+                android:layout_span="2"
+                android:hint="@string/prefs_hint_url"
+                android:layout_width="wrap_content"
+                />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/prefs_hidden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/hidden"
+                android:layout_span="2"
+                android:layout_width="wrap_content"
+                />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <CheckBox android:layout_span="2" android:text="@string/prefs_active" android:id="@+id/active" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+</TableRow>
+
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/hint_setting"
+                android:text="@string/hint_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2" />
+</TableRow>
+
+<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+  	  <Button android:text="@string/prefs_cancel" android:id="@+id/button_cancel" android:layout_width="0dip" android:layout_weight="1" android:layout_height="wrap_content"></Button>
+  	  <Button android:text="@string/prefs_save" android:id="@+id/button_save" android:layout_width="0dip"  android:layout_weight="1" android:layout_height="wrap_content"></Button>
+  	  <Button android:text="@string/prefs_delete" android:id="@+id/button_delete" android:layout_width="0dip" android:layout_weight="1" android:layout_height="wrap_content"></Button>
+</TableRow>
+
+
+
+
+</TableLayout>
+
+    </ScrollView>
+    
+    

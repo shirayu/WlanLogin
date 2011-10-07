@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/pref_category_exe">
+
+        <CheckBoxPreference android:key="exec_autoauth"
+                android:title="@string/prefs_exec_autoauth_name" android:summary="@string/prefs_exec_autoauth_description"
+                android:defaultValue="true" />
+        <CheckBoxPreference android:key="exec_autolunch"
+                android:title="@string/prefs_exec_autolunch_name" android:summary="@string/prefs_exec_autolunch_description"
+                android:defaultValue="false" />
+<!-- 
+        <CheckBoxPreference android:key="exec_debug"
+                android:title="@string/prefs_exec_debug_name" android:summary="@string/prefs_exec_debug_description"
+                android:defaultValue="false" />
+-->
+
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/prefs_auth">
+		<!--
+		<PreferenceScreen android:title="@string/prefs_auth_autoconfig_name"
+			android:summary="@string/prefs_auth_autoconfig_description">
+			<intent android:targetClass="net.shirayu.android.WlanLogin.AutoDetectActivity" android:action="android.intent.action.MAIN" android:targetPackage="net.shirayu.android.WlanLogin"/>
+		</PreferenceScreen>
+		-->
+		<PreferenceScreen android:title="@string/prefs_auth_manage_name" >
+			<intent android:targetClass="net.shirayu.android.WlanLogin.AuthManageActivity" android:action="android.intent.action.MAIN" android:targetPackage="net.shirayu.android.WlanLogin"/>
+		</PreferenceScreen>
+		<PreferenceScreen android:title="@string/prefs_auth_manage_advance_name" >
+			<intent android:targetClass="net.shirayu.android.WlanLogin.AdvancePrefActivity" android:action="android.intent.action.MAIN" android:targetPackage="net.shirayu.android.WlanLogin"/>
+		</PreferenceScreen>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/prefs_info">
+		<PreferenceScreen android:title="@string/prefs_copyright_info">
+			<intent android:targetClass="net.shirayu.android.WlanLogin.CopyrightInfoActivity" android:action="android.intent.action.MAIN" android:targetPackage="net.shirayu.android.WlanLogin"/>
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>
