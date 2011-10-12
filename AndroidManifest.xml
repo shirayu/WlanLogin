@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.shirayu.android.WlanLogin"
-      android:versionCode="902"
-      android:versionName="0.902">
+      android:versionCode="910"
+      android:versionName="0.910">
     <uses-sdk android:minSdkVersion="3" />
 
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
