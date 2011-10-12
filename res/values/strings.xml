@@ -1,91 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">WlanLogin</string>
-    <string name="not_implemented">この機能はまだ実装されていません</string>
+    <string name="not_implemented">This feature has not been implemented yet.</string>
     
     
-    <string name="pref_category_exe">実行</string>
-    <string name="prefs_exec_autoauth_name">自動認証</string>
-    <string name="prefs_exec_autoauth_description">対象の無線LANに接続すると同時に認証を行う</string>
-    <string name="prefs_exec_autolunch_name">自動起動</string>
-    <string name="prefs_exec_autolunch_description">端末起動時に自動起動する</string>
-    <string name="prefs_exec_debug_name">デバッグモード</string>
-    <string name="prefs_exec_debug_description">デバッグモードを有効にする</string>
+    <string name="pref_category_exe">Execute</string>
+    <string name="prefs_exec_autoauth_name">Automatic authentication</string>
+    <string name="prefs_exec_autoauth_description">Enable automatic authentication</string>
+    <string name="prefs_exec_autolunch_name">Automatic start-up</string>
+    <string name="prefs_exec_autolunch_description">Boot this application after device\'s boot</string>
+    <string name="prefs_exec_debug_name">Debug mode</string>
+    <string name="prefs_exec_debug_description">Enable debug mode</string>
     
-    <string name="prefs_auth">設定</string>
-    <string name="prefs_auth_autoconfig_name">自動設定</string>
-    <string name="prefs_auth_autoconfig_description">ネットワーク環境の自動検出を試みる</string>
-    <string name="prefs_auth_manage_name">認証設定の管理</string>
-    <string name="prefs_auth_manage_advance_name">高度な設定</string>
+    <string name="prefs_auth">Setting</string>
+    <string name="prefs_auth_autoconfig_name">Automatic setting</string>
+    <string name="prefs_auth_autoconfig_description">Automatic setting of network environment</string>
+    <string name="prefs_auth_manage_name">Manage authentic information</string>
+    <string name="prefs_auth_manage_advance_name">Advanced setting</string>
     
-    <string name="auth_manage_title">認証設定の管理</string>
-    <string name="auth_edit_title">認証設定の編集</string>
+    <string name="auth_manage_title">Manage authentic information</string>
+    <string name="auth_edit_title">Edit authentic information</string>
     
-    <string name="prefs_info">情報</string>
-    <string name="prefs_copyright_info">著作権情報</string>
+    <string name="prefs_info">Information</string>
+    <string name="prefs_copyright_info">Copyright information</string>
         
-    <string name="advance_pref_title">高度な設定</string>
-    <string name="advance_pref_description">高度な設定</string>
-    <string name="prefs_self_signed_certificate_title">自己署名証明書の設定</string>
-    <string name="prefs_use_self_signed_certificate_name">自己署名証明書を参照</string>
-    <string name="prefs_use_self_signed_certificate_description">認証ページが自己署名証明書を使用している場合，チェックします</string>
-    <string name="prefs_self_signed_certificate_path">自己署名証明書ファイル</string>
-    <string name="prefs_use_self_signed_certificate_folder_name">フォルダ全体の読み込み</string>
-    <string name="prefs_use_self_signed_certificate_folder_description">指定したファイルがあるフォルダ内の全ての自己署名証明書を読み込む</string>
+    <string name="advance_pref_title">Advances setting</string>
+    <string name="advance_pref_description">Advances setting</string>
+    <string name="prefs_self_signed_certificate_title">Manage setting of self-signed certificate</string>
+    <string name="prefs_use_self_signed_certificate_name">Use prepared self-signed certificate(s)</string>
+    <string name="prefs_use_self_signed_certificate_description">Check if authentication page use self-signed certificate</string>
+    <string name="prefs_self_signed_certificate_path">Path of a self-signed certificate</string>
+    <string name="prefs_use_self_signed_certificate_folder_name">Load the entire folder</string>
+    <string name="prefs_use_self_signed_certificate_folder_description">Load all files in the folder in the designated file</string>
     
     
-    <string name="copyright_info_title">このアプリの著作権情報</string>
-    <string name="copyright_info">■著作権表示■\n
-このアプリケーションはGNU General Public Licenseバージョン3 (GPLv3)の下でライセンスされます．\n
+    <string name="copyright_info_title">Copyright information</string>
+    <string name="copyright_info">■Copyright information■\n
+This application is licensed under GNU General Public License version3 (GPLv3).\n
 Copyright 2011-  shirayu (Yuta Hayashibe)\n
 \n
 \n
-■謝辞■\n
-このアプリケーションは次の方の成果物の全部または一部を利用させて頂きました．
-ここに感謝の意を示します．\n
-<a href="http://www.openclipart.org/detail/76723/wifi-web-2.0-sticker-by-shokunin">shokunin氏</a> : アイコン\n
-<a href="http://my.opera.com/crckyl/blog/2011/02/27/android-self-signed-ssl">crckyl氏</a> : MyHttpClient.java\n
-<a href="http://be55.com/">yokamaru氏</a> : WifiConnectReceiver.java, WlanAuthService.java, StartReceiver.java, StartReceiver.java\n
+■Acknowledgment■\n
+This application uses  all or part of the following product.\n
+<a href="http://www.openclipart.org/detail/76723/wifi-web-2.0-sticker-by-shokunin">shokunin</a> : Icon\n
+<a href="http://my.opera.com/crckyl/blog/2011/02/27/android-self-signed-ssl">crckyl</a> : MyHttpClient.java\n
+<a href="http://be55.com/">yokamaru</a> : WifiConnectReceiver.java, WlanAuthService.java, StartReceiver.java, StartReceiver.java\n
 \n
 \n
-また，<a href="http://be55.com/">yokamaru氏</a>の
-<a href="http://be55.com/software/android/ferecauth">FerecAuth</a>は
-このアプリケーション作成の動機づけになりました．\n
+This application is motivated by 
+<a href="http://be55.com/software/android/ferecauth">FerecAuth</a>
+developed by <a href="http://be55.com/">yokamaru</a>\n
 \n
 \n
-■免責事項■\n
-このアプリケーションあるいはそれに関係して発生したいかなる
-損害についても著作権者は責任を負いません．
+■Disclaimer■\n
+We do not take any responsibility for the content of this application.
     </string>
     
-	<string name="login_finished">ログイン処理終了</string>
-	<string name="login_error">ログイン処理中にエラーが発生しました</string>
+	<string name="login_finished">Login finished</string>
+	<string name="login_error">Login failed for an error</string>
 	
 	<string name="prefs_ssid">SSID</string>
 	<string name="prefs_hint_ssid"></string>
-	<string name="prefs_id">ユーザ名</string>
-	<string name="prefs_hint_id">あなたのログインID</string>
-	<string name="prefs_id_fld">ユーザ名パラメータ</string>
+	<string name="prefs_id">User id</string>
+	<string name="prefs_hint_id">Your login ID</string>
+	<string name="prefs_id_fld">Parameter for used id</string>
 	<string name="prefs_hint_id_fld"></string>
-	<string name="prefs_pass">パスワード</string>
-	<string name="prefs_hint_pass">あなたのログインパスワード</string>
-	<string name="prefs_pass_fld">パスワードパラメータ</string>
+	<string name="prefs_pass">Password</string>
+	<string name="prefs_hint_pass">Your login password</string>
+	<string name="prefs_pass_fld">Parameter for login password</string>
 	<string name="prefs_hint_pass_fld"></string>
 	<string name="prefs_url">URL</string>
 	<string name="prefs_hint_url"></string>
-	<string name="prefs_hidden">その他パラメータ</string>
-	<string name="prefs_active">この設定を使用する</string>
-	<string name="hint_setting">設定方法は<a href="http://www.shirayu.net/works/WlanLogin">サポートページ</a>をご覧ください</string>
+	<string name="prefs_hidden">Other parameters</string>
+	<string name="prefs_active">Enable this setting</string>
+	<string name="hint_setting">Support website is <a href="http://www.shirayu.net/works/WlanLogin">here</a>.</string>
 	
 	
-	<string name="add_new">新規作成...</string>
+	<string name="add_new">New...</string>
 	
-	<string name="prefs_save">保存</string>
-	<string name="prefs_cancel">キャンセル</string>
-	<string name="prefs_delete">削除</string>
-	<string name="prefs_delete_confirm">この設定を本当に削除しますか?</string>
+	<string name="prefs_save">Save</string>
+	<string name="prefs_cancel">Cancel</string>
+	<string name="prefs_delete">Delete</string>
+	<string name="prefs_delete_confirm">Really delete this setting?</string>
 	
 	<string name="confirm_yes">Yes</string>
 	<string name="confirm_no">No</string>
-	<string name="confirm_input_ssid">SSIDを入力してください</string>
+	<string name="confirm_input_ssid">Enter SSID</string>
 </resources>
