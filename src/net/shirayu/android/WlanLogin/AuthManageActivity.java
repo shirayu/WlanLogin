@@ -28,13 +28,12 @@ public class AuthManageActivity extends Activity {
         listView.setAdapter(adapter);
         
         
-        // リストビューのアイテムがクリックされた時に呼び出されるコールバックリスナーを登録します
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                 ListView listView = (ListView) parent;
-                // クリックされたアイテムを取得します
+                // Get the clicked item
                 String item = (String) listView.getItemAtPosition(position);
                 Intent intent = new Intent(AuthManageActivity.this, AuthEditActivity.class);
                 intent.putExtra("ssid", item);
@@ -44,13 +43,11 @@ public class AuthManageActivity extends Activity {
         });
         
         /*
-        // リストビューのアイテムが選択された時に呼び出されるコールバックリスナーを登録します
         listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                     int position, long id) {
                 ListView listView = (ListView) parent;
-                // 選択されたアイテムを取得します
                 String item = (String) listView.getSelectedItem();
                 Toast.makeText(AuthManageActivity.this, item, Toast.LENGTH_LONG).show();
             }
@@ -69,7 +66,7 @@ public class AuthManageActivity extends Activity {
         	 final String ssid = data.getStringExtra("ssid");
         	 final String original_ssid = data.getStringExtra("original_ssid");
 
-             //アダプタの書き換え
+             // Modify the adapter
              if(original_ssid.equals( getResources().getString(R.string.add_new) ) ){
              }
              else{

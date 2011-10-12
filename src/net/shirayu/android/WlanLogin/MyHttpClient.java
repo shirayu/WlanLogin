@@ -225,8 +225,8 @@ implements HttpClient,
 	  
 	  public static KeyStore loadKeyStore(Context context) throws KeyStoreException, NoSuchAlgorithmException, CertificateException, FileNotFoundException, IOException, NoSuchProviderException{
 			/*
-			 * ここの関数は独自に実装．
-				デフォルトキーストアについては，次のサイトが参考になった．
+			 * Original implementation.
+				I refer the following sites about the default keystore.
 				http://wiki.livedoor.jp/syo1976/d/javassl
 				http://d.hatena.ne.jp/Kazzz/20110319/p1
 			 */

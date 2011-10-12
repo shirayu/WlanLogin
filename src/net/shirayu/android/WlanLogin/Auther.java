@@ -28,12 +28,12 @@ public class Auther {
 			+"&" + authData.hidden ;
 		
 		try {
-			//FIXME 毎回生成は負荷がかかるので予め作っておく?
+			//FIXME Prepare the client because its generation may have heavy load.
 
 			StringEntity paramEntity = new StringEntity(postArg);
 			paramEntity.setChunked(false);
 			paramEntity.setContentType("application/x-www-form-urlencoded");
-			HttpPost method = new HttpPost(authData.url); //TODO get認証に対応する?
+			HttpPost method = new HttpPost(authData.url);
 			method.setEntity(paramEntity);
 
 			KeyStore certstore = MyHttpClient.loadKeyStore(this.context);

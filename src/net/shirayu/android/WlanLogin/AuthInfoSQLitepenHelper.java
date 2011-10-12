@@ -75,7 +75,6 @@ public class AuthInfoSQLitepenHelper extends SQLiteOpenHelper {
 	        SQLiteDatabase db = super.getWritableDatabase();
 	        Cursor c = db.rawQuery(GET_ALL_SSID, null);
 	 
-	    	//adapterにDBから文字列を追加
 	        boolean isEof = c.moveToFirst();
 	        while (isEof) {
 	        	adapter.add( c.getString(0) );
@@ -104,7 +103,6 @@ public class AuthInfoSQLitepenHelper extends SQLiteOpenHelper {
 	        else{
 	        	c = db.rawQuery( String.format(GET_ALL_FIELD, escape_quote(ssid) ), null);
 	        };
-	    	//adapterにDBから文字列を追加
 	        boolean isEof = c.moveToFirst();
 	        AuthData authData = new AuthData();
 	        if (isEof) {
