@@ -6,7 +6,6 @@ import java.io.IOException;
 import net.shirayu.android.WlanLogin.R;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,51 +18,51 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 class AuthEditClickListener implements View.OnClickListener{
-	private Context context;
+	private Activity activity;
 	private String original_ssid;
 	private boolean newid;
 	private int position; 
 	
-	AuthEditClickListener(Context context, String original_ssid, boolean newid, int position){
-		this.context = context;
+	AuthEditClickListener(Activity activity, String original_ssid, boolean newid, int position){
+		this.activity = activity;
 		this.original_ssid = original_ssid;
 		this.newid = newid;
 		this.position = position;
 	}
 	@Override
 	public void onClick(View v) {
-		final String new_ssid = ((EditText) ((Activity) context).findViewById(R.id.ssid)).getText().toString();
+		final String new_ssid = ((EditText) activity.findViewById(R.id.ssid)).getText().toString();
 		if ( new_ssid.equals("") ){
-	        Toast.makeText(context, R.string.confirm_input_ssid, Toast.LENGTH_SHORT).show();
+	        Toast.makeText(activity, R.string.confirm_input_ssid, Toast.LENGTH_SHORT).show();
 		}
 		else{
-	    	AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(context);
+	    	AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(activity);
 			if (this.newid==true & db_mng.hasSsid(new_ssid, false) ){
-				Toast.makeText(context, R.string.confirm_duplicate_ssid, Toast.LENGTH_SHORT).show();
+				Toast.makeText(activity, R.string.confirm_duplicate_ssid, Toast.LENGTH_SHORT).show();
 			}
 			else{
 				update_this_data();
 				Intent intent = new Intent();
-				intent.putExtra("original_ssid", original_ssid);
-				intent.putExtra("ssid", new_ssid );
-				intent.putExtra("position", position);
-				((Activity) context).setResult(Activity.RESULT_OK, intent);
-				((Activity) context).finish();
+				intent.putExtra(Const.original_ssid, original_ssid);
+				intent.putExtra(Const.ssid, new_ssid );
+				intent.putExtra(Const.position, position);
+				activity.setResult(Activity.RESULT_OK, intent);
+				activity.finish();
 			};
 		};
 	};
 	
     private void update_this_data(){
-    	AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(context);
+    	AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(activity);
     	db_mng.update( original_ssid, new AuthData(
-    			((EditText) ((Activity) context).findViewById(R.id.ssid)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.id)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.id_fld)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.pass)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.pass_fld)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.url)).getText().toString(),
-    			((EditText) ((Activity) context).findViewById(R.id.hidden)).getText().toString(),
-    			((CheckBox)(((Activity) context).findViewById(R.id.active))).isChecked()
+    			((EditText) activity.findViewById(R.id.ssid)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.id)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.id_fld)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.pass)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.pass_fld)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.url)).getText().toString(),
+    			((EditText) activity.findViewById(R.id.hidden)).getText().toString(),
+    			((CheckBox)(activity.findViewById(R.id.active))).isChecked()
     	) );
     };  
  
@@ -85,9 +84,9 @@ public class AuthEditActivity extends Activity {
         
         //set parameters to the field
         Bundle extras = getIntent().getExtras();
-        this.original_ssid = extras.getString("ssid");
-        this.newid = extras.getBoolean("new");
-        final int position = extras.getInt("position");
+        this.original_ssid = extras.getString(Const.ssid);
+        this.newid = extras.getBoolean(Const.newid);
+        final int position = extras.getInt(Const.position);
         this.set_field_data();
         
         //Set of Buttons
@@ -107,9 +106,9 @@ public class AuthEditActivity extends Activity {
         						final boolean deleted = delete_this_data();
         						if(deleted){
 	        		    			Intent intent = new Intent();
-	        		    			intent.putExtra("original_ssid", original_ssid);
-	        		    			intent.putExtra("ssid", "");
-	        		    			intent.putExtra("position", position);
+	        		    			intent.putExtra(Const.original_ssid, original_ssid);
+	        		    			intent.putExtra(Const.ssid, "");
+	        		    			intent.putExtra(Const.position, position);
 	        						setResult(RESULT_OK, intent);
 	        						finish();
         						}

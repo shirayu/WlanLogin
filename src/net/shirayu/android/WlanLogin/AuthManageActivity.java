@@ -36,13 +36,13 @@ public class AuthManageActivity extends Activity {
                 // Get the clicked item
                 String item = (String) listView.getItemAtPosition(position);
                 Intent intent = new Intent(AuthManageActivity.this, AuthEditActivity.class);
-                intent.putExtra("ssid", item);
-                intent.putExtra("position", position);
+                intent.putExtra(Const.ssid, item);
+                intent.putExtra(Const.position, position);
                 if(item.equals( getResources().getString(R.string.add_new) ) ){
-                    intent.putExtra("new", true);
+                    intent.putExtra(Const.newid, true);
                 }
                 else{
-                    intent.putExtra("new", false);
+                    intent.putExtra(Const.newid, false);
                 };
                 startActivityForResult(intent, 0);
             }
@@ -68,9 +68,9 @@ public class AuthManageActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
          if (resultCode == RESULT_OK) {
-        	 final int pos = data.getIntExtra("position", 0);
-        	 final String ssid = data.getStringExtra("ssid");
-        	 final String original_ssid = data.getStringExtra("original_ssid");
+        	 final int pos = data.getIntExtra(Const.position, 0);
+        	 final String ssid = data.getStringExtra(Const.ssid);
+        	 final String original_ssid = data.getStringExtra(Const.original_ssid);
 
              // Modify the adapter
              if(original_ssid.equals( getResources().getString(R.string.add_new) ) ){

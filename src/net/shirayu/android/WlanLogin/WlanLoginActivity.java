@@ -25,7 +25,7 @@ public class WlanLoginActivity extends PreferenceActivity {
         addPreferencesFromResource(R.xml.pref);
     	authServiceIntent = new Intent(getApplicationContext(),	WlanAuthService.class);
     	
-        CheckBoxPreference checkBoxPreference1 = (CheckBoxPreference) findPreference("exec_autoauth");
+        CheckBoxPreference checkBoxPreference1 = (CheckBoxPreference) findPreference(Const.exec_autoauth);
         if(checkBoxPreference1.isChecked()){
         	startService(authServiceIntent);
         };
@@ -46,7 +46,7 @@ public class WlanLoginActivity extends PreferenceActivity {
                                 }
         				});
 
-        CheckBoxPreference checkBoxPreference2 = (CheckBoxPreference) findPreference("exec_autolunch"); 
+        CheckBoxPreference checkBoxPreference2 = (CheckBoxPreference) findPreference(Const.exec_autolunch); 
         checkBoxPreference2.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){ 
                                 @Override
                                 public boolean onPreferenceChange(Preference preference, Object newValue) { 

@@ -17,7 +17,7 @@ public class StartReceiver extends BroadcastReceiver {
         public void onReceive(Context context, Intent intent) {
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
 
-                if (sharedPreferences.getBoolean("exec_autolunch", false)) {
+                if (sharedPreferences.getBoolean(Const.exec_autolunch, false)) {
                 	Intent authServiceIntent = new Intent(context.getApplicationContext(),
                                     WlanAuthService.class);
                         context.startService(authServiceIntent);
