@@ -88,4 +88,5 @@ Copyright 2011-  shirayu (Yuta Hayashibe)\n
 	<string name="confirm_yes">Yes</string>
 	<string name="confirm_no">No</string>
 	<string name="confirm_input_ssid">SSIDを入力してください</string>
+	<string name="confirm_duplicate_ssid">入力したSSIDは既に存在します</string>
 </resources>

@@ -129,6 +129,27 @@ public class AuthInfoSQLitepenHelper extends SQLiteOpenHelper {
     };
     
 
+    public boolean hasSsid(final String ssid, final boolean activeConstraint){
+        SQLiteDatabase db = super.getReadableDatabase();
+ 
+        Cursor c;
+        if(activeConstraint){
+        	c = db.rawQuery( String.format(GET_ALL_FIELD_ACTIVE, escape_quote(ssid) ), null);
+        }
+        else{
+        	c = db.rawQuery( String.format(GET_ALL_FIELD, escape_quote(ssid) ), null);
+        };
+        boolean isEof = c.moveToFirst();
+        boolean hasSsid = false;
+        if (isEof) {
+        	 hasSsid = true;
+        };
+        c.close();
+        db.close();
+        return hasSsid;
+};
+
+
 	public void update(final String ssid, final AuthData authData) {
 		SQLiteDatabase db = super.getWritableDatabase();
 		this.delete(db, ssid);

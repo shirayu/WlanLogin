@@ -86,4 +86,5 @@ We do not take any responsibility for the content of this application.
 	<string name="confirm_yes">Yes</string>
 	<string name="confirm_no">No</string>
 	<string name="confirm_input_ssid">Enter SSID</string>
+	<string name="confirm_duplicate_ssid">Entered SSID has already existed</string>
 </resources>

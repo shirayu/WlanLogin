@@ -45,14 +45,19 @@ public class AuthEditActivity extends Activity {
     		        Toast.makeText(AuthEditActivity.this, R.string.confirm_input_ssid, Toast.LENGTH_SHORT).show();
     			}
     			else{
-    				//TODO 重複チェック
-	    			update_this_data();
-	    			Intent intent = new Intent();
-	    			intent.putExtra("original_ssid", original_ssid);
-	    			intent.putExtra("ssid", new_ssid );
-	    			intent.putExtra("position", position);
-	    			setResult(RESULT_OK, intent);
-	    			finish();
+    	        	AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(AuthEditActivity.this);
+    				if (db_mng.hasSsid(new_ssid, false) ){
+    					Toast.makeText(AuthEditActivity.this, R.string.confirm_duplicate_ssid, Toast.LENGTH_SHORT).show();
+    				}
+    				else{
+		    			update_this_data();
+		    			Intent intent = new Intent();
+		    			intent.putExtra("original_ssid", original_ssid);
+		    			intent.putExtra("ssid", new_ssid );
+		    			intent.putExtra("position", position);
+		    			setResult(RESULT_OK, intent);
+		    			finish();
+    				};
     			};
     		}
         });
