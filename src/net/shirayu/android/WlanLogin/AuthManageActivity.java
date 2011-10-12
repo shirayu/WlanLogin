@@ -38,6 +38,12 @@ public class AuthManageActivity extends Activity {
                 Intent intent = new Intent(AuthManageActivity.this, AuthEditActivity.class);
                 intent.putExtra("ssid", item);
                 intent.putExtra("position", position);
+                if(item.equals( getResources().getString(R.string.add_new) ) ){
+                    intent.putExtra("new", true);
+                }
+                else{
+                    intent.putExtra("new", false);
+                };
                 startActivityForResult(intent, 0);
             }
         });
