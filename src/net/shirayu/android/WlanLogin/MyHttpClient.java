@@ -49,6 +49,7 @@ import org.apache.http.protocol.HttpContext;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.preference.PreferenceManager;
 
 
@@ -230,8 +231,15 @@ implements HttpClient,
 				http://wiki.livedoor.jp/syo1976/d/javassl
 				http://d.hatena.ne.jp/Kazzz/20110319/p1
 			 */
-		  	KeyStore certstore = KeyStore.getInstance(KeyStore.getDefaultType());
-			certstore.load(new FileInputStream(System.getProperty("javax.net.ssl.trustStore")), null); //load default keystore
+			KeyStore certstore;
+			if (Integer.valueOf(Build.VERSION.SDK) >= 14) {
+				// load from unified key store
+				certstore = KeyStore.getInstance("AndroidCAStore");
+				certstore.load(null, null);
+			} else {
+				certstore =  KeyStore.getInstance(KeyStore.getDefaultType());
+				certstore.load(new FileInputStream(System.getProperty("javax.net.ssl.trustStore")), null); //load default keystore
+			}
 
 			//load self_signed_certificate?
 			SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
