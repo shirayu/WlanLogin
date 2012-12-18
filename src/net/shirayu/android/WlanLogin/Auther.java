@@ -56,6 +56,10 @@ public class Auther {
 
 	public void doAuth() {
 		final String ssid = this.getSSID();
+		if (ssid==null){ //if SSID is null, do nothing
+			return;
+		};
+		
     	final AuthInfoSQLitepenHelper db_mng = new AuthInfoSQLitepenHelper(this.context);
     	AuthData authData;
 		try {
