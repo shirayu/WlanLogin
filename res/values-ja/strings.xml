@@ -58,7 +58,8 @@ Copyright 2011-  shirayu (Yuta Hayashibe)\n
 損害についても著作権者は責任を負いません．
     </string>
     
-	<string name="login_finished">ログイン処理終了</string>
+	<string name="login_start">ログイン処理を開始します</string>
+	<string name="login_finished">ログイン処理終了 (設定が間違っていなければ)</string>
 	<string name="login_error">ログイン処理中にエラーが発生しました</string>
 	
 	<string name="prefs_ssid">SSID</string>

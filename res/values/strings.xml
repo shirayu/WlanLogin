@@ -56,7 +56,8 @@ developed by <a href="http://be55.com/">yokamaru</a>\n
 We do not take any responsibility for the content of this application.
     </string>
     
-	<string name="login_finished">Login finished</string>
+    <string name="login_start">Starting login</string>
+	<string name="login_finished">Login finished (if the setting is not wrong)</string>
 	<string name="login_error">Login failed for an error</string>
 	
 	<string name="prefs_ssid">SSID</string>

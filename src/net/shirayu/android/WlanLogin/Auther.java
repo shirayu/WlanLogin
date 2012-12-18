@@ -22,6 +22,8 @@ public class Auther {
 	}
 
 	public void doAuth(final AuthData authData) {
+		Toast.makeText(context, context.getResources().getString(R.string.login_start), Toast.LENGTH_SHORT  ).show();
+		
 		String postArg = 
 			authData.pass_fld + "=" + authData.pass +
 			"&" +  authData.id_fld + "=" + authData.id
